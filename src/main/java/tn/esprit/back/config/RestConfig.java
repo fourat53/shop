@@ -24,7 +24,7 @@ public class RestConfig implements RepositoryRestConfigurer {
     config.exposeIdsFor(classes);
 
     cors.addMapping("/**")
-        .allowedOrigins("http://localhost:3000")
+        .allowedOrigins("http://localhost:3000", "http://127.0.0.1:3000")
         .allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS")
         .allowedHeaders("*")
         .allowCredentials(true);
